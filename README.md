@@ -1,0 +1,7 @@
+NetBitmap is an attempt to simplify working with images in .Net.
+
+My experience with this in the past has been a little painful. Different image types seem to be best suited to different functions, and by best suited to I really mean fastest at. Through benchmarking, we found it was often faster to convert an image from one type (say a System.Drawing Bitmap) to another (say a WriteableBitmap), do what we needed to do (for example draw a shape) and then convert back than it would be to perform the function directly onto the System.Drawing Bitmap. For other functions, the System.Drawing Bitmap would be significantly faster.
+
+The purpose of NetBitmap is to do all of this plumbing for you, and to provide you with one image object to work with, which encompasses all of the functionality of the different image types within the .Net framework, and always goes about things in the fastest way. At any time, can access a System.Drawing Bitmap version of your image, a BitmapImage version of your image, and a WriteableBitmap version of your image without having to think too much about it, which can be useful if you are working on an application which is part WinForms, part WPF.
+
+I would love some help, and would openly welcome constructive criticism so feel free to contribute, criticise, fork, star or just watch. Thanks!
