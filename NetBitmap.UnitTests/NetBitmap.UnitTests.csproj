@@ -6,7 +6,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>d8deaf73-d9e6-4918-9e9e-8eaf32c84780</ProjectGuid>
+    <ProjectGuid>{4536747C-B48A-49C2-AB21-E57E0ACC0C76}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>NetBitmap.UnitTests</RootNamespace>
@@ -33,10 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
@@ -44,7 +49,34 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\ConverterTests\ConverterTestInitializer.cs" />
+    <Compile Include="Core\ConverterTests\ImageConverterTests.cs" />
+    <Compile Include="Core\ConverterTests\BmpTests.cs" />
+    <Compile Include="Core\ConverterTests\GifTests.cs" />
+    <Compile Include="Core\ConverterTests\JpegTests.cs" />
+    <Compile Include="Core\ConverterTests\PngTests.cs" />
+    <Compile Include="Core\ConverterTests\IConverterTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NetBitmap\NetBitmap.Core\NetBitmap.Core.csproj">
+      <Project>{672D5E79-3757-4693-8DFF-66A74B26A86D}</Project>
+      <Name>NetBitmap.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Core\ConverterTests\TestImages\testBmp.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\ConverterTests\TestImages\testGif.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\ConverterTests\TestImages\testJpeg.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Core\ConverterTests\TestImages\testPng.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
