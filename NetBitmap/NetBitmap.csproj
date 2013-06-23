@@ -47,6 +47,12 @@
     <Compile Include="Img.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="NetBitmap.Core\NetBitmap.Core.csproj">
+      <Project>{672D5E79-3757-4693-8DFF-66A74B26A86D}</Project>
+      <Name>NetBitmap.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

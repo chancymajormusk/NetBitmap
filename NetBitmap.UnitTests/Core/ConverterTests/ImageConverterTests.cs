@@ -18,7 +18,6 @@ namespace NetBitmap.UnitTests.Core.ConverterTests
             _writeableBitmap = writeableBitmap;
         }
 
-        [TestMethod]
         public void BitmapImageToBitmapConversionSucceeds()
         {
             var bitmapImageToBitmapConverter = new BitmapImageToBitmapConverter();
@@ -27,7 +26,6 @@ namespace NetBitmap.UnitTests.Core.ConverterTests
             Assert.IsTrue(bitmap != null);
         }
 
-        [TestMethod]
         public void BitmapImageToWriteableBitmapConversionSucceeds()
         {
             var bitmapImageToWriteableBitmapConverter = new BitmapImageToWriteableBitmapConverter();
@@ -36,7 +34,6 @@ namespace NetBitmap.UnitTests.Core.ConverterTests
             Assert.IsTrue(writeableBitmap != null);
         }
 
-        [TestMethod]
         public void BitmapToBitmapImageConversionSucceeds()
         {
             var bitmapToBitmapImageConverter = new BitmapToBitmapImageConverter();
@@ -45,7 +42,6 @@ namespace NetBitmap.UnitTests.Core.ConverterTests
             Assert.IsTrue(bitmapImage != null);
         }
 
-        [TestMethod]
         public void BitmapToWriteableBitmapConversionSucceeds()
         {
             var bitmapToWriteableBitmapConverter = new BitmapToWriteableBitmapConverter();
@@ -54,7 +50,6 @@ namespace NetBitmap.UnitTests.Core.ConverterTests
             Assert.IsTrue(writeableBitmap != null);
         }
 
-        [TestMethod]
         public void WriteableBitmapToBitmapConversionSucceeds()
         {
             var writeableBitmapToBitmapConverter = new WriteableBitmapToBitmapConverter();
@@ -63,7 +58,6 @@ namespace NetBitmap.UnitTests.Core.ConverterTests
             Assert.IsTrue(bitmap != null);
         }
 
-        [TestMethod]
         public void WriteableBitmapToBitmapImageConversionSucceeds()
         {
             var writeableBitmapToBitmapImageConverter = new WriteableBitmapToBitmapImageConverter();

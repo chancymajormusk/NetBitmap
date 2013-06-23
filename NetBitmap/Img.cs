@@ -1,38 +1,44 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Media.Imaging;
+using NetBitmap.Core.Containers;
 
 namespace NetBitmap
 {
     public class Img
     {
-        private readonly Bitmap _bitmap;
-        private readonly BitmapImage _bitmapImage;
-        private readonly WriteableBitmap _writeableBitmap;
+        private readonly IImageContainer _imageContainer;
+
+        public Img(string imageLocation, UriKind uriKind)
+        {
+            _imageContainer = ImageContainerFactory.GetImageContainer(imageLocation, uriKind);
+        }
+
+        public Img(Uri imageLocation)
+        {
+            _imageContainer = ImageContainerFactory.GetImageContainer(imageLocation);
+        }
 
         public Img(Bitmap bitmap)
         {
-            _bitmap = bitmap;
+            _imageContainer = ImageContainerFactory.GetImageContainer(bitmap);
         }
 
         public Img(BitmapImage bitmapImage)
         {
-            _bitmapImage = bitmapImage;
+            _imageContainer = ImageContainerFactory.GetImageContainer(bitmapImage);
         }
 
         public Img(WriteableBitmap writeableBitmap)
         {
-            _writeableBitmap = writeableBitmap;
+            _imageContainer = ImageContainerFactory.GetImageContainer(writeableBitmap);
         }
 
         public Bitmap Bitmap
         {
             get
             {
-                return _bitmap;
+                return _imageContainer.Bitmap;
             }
         }
 
@@ -40,7 +46,7 @@ namespace NetBitmap
         {
             get
             {
-                return _bitmapImage;
+                return _imageContainer.BitmapImage;
             }
         }
 
@@ -48,7 +54,7 @@ namespace NetBitmap
         {
             get
             {
-                return _writeableBitmap;
+                return _imageContainer.WriteableBitmap;
             }
         }
     }

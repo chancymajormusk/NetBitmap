@@ -44,12 +44,18 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Containers\BitmapContainer.cs" />
+    <Compile Include="Containers\BitmapImageContainer.cs" />
+    <Compile Include="Containers\IImageContainer.cs" />
+    <Compile Include="Containers\ImageContainerFactory.cs" />
+    <Compile Include="Containers\WriteableBitmapContainer.cs" />
     <Compile Include="Converters\BitmapImageToBitmapConverter.cs" />
     <Compile Include="Converters\BitmapImageToWriteableBitmapConverter.cs" />
     <Compile Include="Converters\BitmapToBitmapImageConverter.cs" />
     <Compile Include="Converters\BitmapToWriteableBitmapConverter.cs" />
     <Compile Include="Converters\WriteableBitmapToBitmapConverter.cs" />
     <Compile Include="Converters\WriteableBitmapToBitmapImageConverter.cs" />
+    <Compile Include="Containers\StringContainer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
