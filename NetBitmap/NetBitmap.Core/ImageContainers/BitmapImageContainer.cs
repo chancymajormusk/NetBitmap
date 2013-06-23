@@ -1,9 +1,12 @@
 ﻿using System.Drawing;
 using System.Windows.Media.Imaging;
-using NetBitmap.Core.Converters;
+using NetBitmap.Core.ImageConverters;
 
-namespace NetBitmap.Core.Containers
+namespace NetBitmap.Core.ImageContainers
 {
+    /// <summary>
+    /// This is the IImageContainer class for BitmapImage initialization. 
+    /// </summary>
     public class BitmapImageContainer : IImageContainer
     {
         public BitmapImageContainer(BitmapImage bitmapImage)

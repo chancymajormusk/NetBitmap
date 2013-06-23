@@ -1,8 +1,8 @@
 ﻿using System.Drawing;
 using System.Windows.Media.Imaging;
-using NetBitmap.Core.Converters;
+using NetBitmap.Core.ImageConverters;
 
-namespace NetBitmap.Core.Containers
+namespace NetBitmap.Core.ImageContainers
 {
     public class WriteableBitmapContainer : IImageContainer
     {

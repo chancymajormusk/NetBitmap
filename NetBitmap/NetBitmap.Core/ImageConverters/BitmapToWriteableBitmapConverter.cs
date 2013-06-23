@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using System.Windows.Media.Imaging;
 
-namespace NetBitmap.Core.Converters
+namespace NetBitmap.Core.ImageConverters
 {
     public class BitmapToWriteableBitmapConverter
     {

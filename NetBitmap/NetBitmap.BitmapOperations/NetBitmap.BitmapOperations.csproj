@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{672D5E79-3757-4693-8DFF-66A74B26A86D}</ProjectGuid>
+    <ProjectGuid>{AC179071-806F-4DAA-AAC1-DC202A9D89CD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NetBitmap.Core</RootNamespace>
-    <AssemblyName>NetBitmap.Core</AssemblyName>
+    <RootNamespace>NetBitmap.BitmapOperations</RootNamespace>
+    <AssemblyName>NetBitmap.BitmapOperations</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,34 +31,30 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="PresentationCore" />
+    <Reference Include="AForge">
+      <HintPath>..\packages\AForge.2.2.4\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging">
+      <HintPath>..\packages\AForge.Imaging.2.2.4\lib\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Math">
+      <HintPath>..\packages\AForge.Math.2.2.4\lib\AForge.Math.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ImageContainers\BitmapContainer.cs" />
-    <Compile Include="ImageContainers\BitmapImageContainer.cs" />
-    <Compile Include="ImageContainers\IImageContainer.cs" />
-    <Compile Include="ImageContainers\ImageContainerFactory.cs" />
-    <Compile Include="ImageContainers\WriteableBitmapContainer.cs" />
-    <Compile Include="ImageConverters\BitmapImageToBitmapConverter.cs" />
-    <Compile Include="ImageConverters\BitmapImageToWriteableBitmapConverter.cs" />
-    <Compile Include="ImageConverters\BitmapToBitmapImageConverter.cs" />
-    <Compile Include="ImageConverters\BitmapToWriteableBitmapConverter.cs" />
-    <Compile Include="ImageConverters\WriteableBitmapToBitmapConverter.cs" />
-    <Compile Include="ImageConverters\WriteableBitmapToBitmapImageConverter.cs" />
-    <Compile Include="ImageContainers\StringContainer.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -3,7 +3,7 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Windows.Media.Imaging;
 
-namespace NetBitmap.Core.Converters
+namespace NetBitmap.Core.ImageConverters
 {
     public class BitmapImageToBitmapConverter
     {
@@ -21,6 +21,8 @@ namespace NetBitmap.Core.Converters
                 var encoder = new BmpBitmapEncoder();
                 encoder.Frames.Add(BitmapFrame.Create(bitmapImage));
                 encoder.Save(ms);
+
+                System.Windows.Media.PixelFormat format = bitmapImage.Format;
 
                 using (var tmpBitmap = new Bitmap(ms))
                 {

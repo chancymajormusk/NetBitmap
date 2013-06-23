@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{672D5E79-3757-4693-8DFF-66A74B26A86D}</ProjectGuid>
+    <ProjectGuid>{E5D3B015-6D03-4AC1-8FFC-4D28B2A2BA6E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NetBitmap.Core</RootNamespace>
-    <AssemblyName>NetBitmap.Core</AssemblyName>
+    <RootNamespace>NetBitmap.WriteableBitmapOperations</RootNamespace>
+    <AssemblyName>NetBitmap.WriteableBitmapOperations</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,34 +31,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="WindowsBase" />
+    <Reference Include="WriteableBitmapEx.Wpf">
+      <HintPath>..\packages\WriteableBitmapEx.1.0.8.0\lib\net40\WriteableBitmapEx.Wpf.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ImageContainers\BitmapContainer.cs" />
-    <Compile Include="ImageContainers\BitmapImageContainer.cs" />
-    <Compile Include="ImageContainers\IImageContainer.cs" />
-    <Compile Include="ImageContainers\ImageContainerFactory.cs" />
-    <Compile Include="ImageContainers\WriteableBitmapContainer.cs" />
-    <Compile Include="ImageConverters\BitmapImageToBitmapConverter.cs" />
-    <Compile Include="ImageConverters\BitmapImageToWriteableBitmapConverter.cs" />
-    <Compile Include="ImageConverters\BitmapToBitmapImageConverter.cs" />
-    <Compile Include="ImageConverters\BitmapToWriteableBitmapConverter.cs" />
-    <Compile Include="ImageConverters\WriteableBitmapToBitmapConverter.cs" />
-    <Compile Include="ImageConverters\WriteableBitmapToBitmapImageConverter.cs" />
-    <Compile Include="ImageContainers\StringContainer.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

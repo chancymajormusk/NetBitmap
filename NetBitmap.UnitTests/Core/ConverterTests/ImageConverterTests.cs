@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using System.Windows.Media.Imaging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NetBitmap.Core.Converters;
+using NetBitmap.Core.ImageConverters;
 
 namespace NetBitmap.UnitTests.Core.ConverterTests
 {

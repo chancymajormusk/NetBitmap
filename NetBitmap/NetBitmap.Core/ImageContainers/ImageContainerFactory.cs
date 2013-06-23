@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Media.Imaging;
 
-namespace NetBitmap.Core.Containers
+namespace NetBitmap.Core.ImageContainers
 {
     public static class ImageContainerFactory
     {

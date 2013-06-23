@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Media.Imaging;
-using NetBitmap.Core.Containers;
+using NetBitmap.Core.ImageContainers;
 
 namespace NetBitmap
 {
